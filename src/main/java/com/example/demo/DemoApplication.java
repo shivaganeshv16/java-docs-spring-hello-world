@@ -11,7 +11,11 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-		 String message = "Hello, I am ChatGPT. How can I assist you today?";
+	}
+
+	@RequestMapping("/")
+	String sayHello() {
+        String message = "Hello, I am ChatGPT. How can I assist you today?";
         String[] words = message.split(" "); // split the message into an array of words
         for (String word : words) {
             try {
@@ -20,12 +24,5 @@ public class DemoApplication {
                 e.printStackTrace();
             }
             System.out.print(word + " ");
-        }
-	}
-
-	// @RequestMapping("/")
-	// String sayHello() {
-	// 	return "Hello World!";
-
-	// }
+        }	}
 }
