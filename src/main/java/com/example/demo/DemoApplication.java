@@ -15,17 +15,6 @@ public class DemoApplication {
 
 	@RequestMapping("/")
 	String sayHello() {
-        String message = "Hello, I am ChatGPT. How can I assist you today?";
-        String[] words = message.split(" ");
-        StringBuilder sb = new StringBuilder();
-        for (String word : words) {
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            sb.append(word + " ");
-        }
-        return sb.toString();	
-		}
+		return "Hello mawaa!";
+	}
 }
