@@ -1,4 +1,6 @@
 package com.example.demo;
+import java.util.Scanner;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,4 +19,15 @@ public class DemoApplication {
 	String sayHello() {
 		return "Hello World!";
 	}
+
+	   String message = "Hello, I am ChatGPT. How can I assist you today?";
+        String[] words = message.split(" "); // split the message into an array of words
+        for (String word : words) {
+            try {
+                Thread.sleep(500); // wait for half a second before printing the next word
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.print(word + " ");
+        }
 }
