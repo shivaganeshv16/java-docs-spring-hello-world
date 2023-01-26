@@ -17,7 +17,7 @@ public class DemoApplication {
 
 	@RequestMapping("/")
 	String sayHello() {
-		return "Hello World!";
+		return "Welcome Shiva!";
 	}
 
 	   String message = "Hello, I am ChatGPT. How can I assist you today?";
