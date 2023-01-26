@@ -16,13 +16,16 @@ public class DemoApplication {
 	@RequestMapping("/")
 	String sayHello() {
         String message = "Hello, I am ChatGPT. How can I assist you today?";
-        String[] words = message.split(" "); // split the message into an array of words
+        String[] words = message.split(" ");
+        StringBuilder sb = new StringBuilder();
         for (String word : words) {
             try {
-                Thread.sleep(500); // wait for half a second before printing the next word
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.print(word + " ");
-        }	}
+            sb.append(word + " ");
+        }
+        return sb.toString();	
+		}
 }
